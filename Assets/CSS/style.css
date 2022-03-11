@@ -1,17 +1,245 @@
-#container {
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  position: relative;
-  background-image: url('../Image/01.jpg');
-  background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-nav {
-  width: 100%;
-  height: 90px;
-  margin: -22px;
-  margin-left: -0px;
+body {
+  background-image: url('../Image/background/background-image_02.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1080vh;
+  min-width: auto;
+  max-height: 70vh;
+  min-height: auto;
+}
+
+#img-logo {
+  max-width: 300px;
+  min-width: auto;
+  margin-left: 2vh;
+  margin-top: 2vh;
+}
+
+.container_corpo {
+  border: 4px solid rgb(228, 18, 18);
+  margin-left: 5vh;
+  margin-right: 5vh;
+  margin-top: 30vh;
+  margin-bottom: 20vh;
+  max-width: 200vh;
+  max-height: 70vh;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.container_selection_champs {
+  border: 4px solid #fff;
+  color: #fff;
+  /* margin-left: 50vh;
+  margin-top: 60vh; */
+  max-width: 225vh;
+  min-width: auto;
+  max-height: 65vh;
+  min-height: auto;
+  display: flexbox;
+  position: absolute;
+  align-items: stretch;
+}
+
+.container_champs_nomes {
+  position: relative;
+  max-width: 225vh;
+  max-height: 65vh;
+  text-align: center;
+}
+
+#imagem {
+  height: 100vh;
+  max-width: 225vh;
+  max-height: 65vh;
+}
+
+.container_selection_setas {
+  position: absolute;
+  z-index: 10 !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.selection_setas {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 400px;
+}
+
+.center-con1 {
+  display: flex;
+  position: relative;
+}
+
+.round1 {
+  display: flex;
+  position: relative;
+  border: 4px solid #9b59b6;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.round1:hover {
+  border: 4px solid #fff;
+}
+
+.round1 span {
+  z-index: 999;
+  height: 4px;
+  margin: 1px;
+  width: 30px;
+  background: #9b59b6;
+  transition: 0.4s ease;
+}
+
+.round1 span:first-child {
+  display: flex;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 25%;
+  bottom: 35%;
+}
+
+.round1 span:nth-child(2) {
+  display: flex;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 45%;
+  bottom: 35%;
+}
+
+.round1 span:nth-child(3) {
+  display: flex;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 25%;
+  bottom: 54%;
+}
+
+.round1 span:nth-child(4) {
+  display: flex;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 45%;
+  bottom: 54%;
+}
+
+.round1:hover span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.round1:hover span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.round1:hover span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.round1:hover span:nth-child(4) {
+  transform: rotate(-45deg);
+}
+
+.center-con2 {
+  display: flex;
+  position: relative;
+}
+
+.round2 {
+  display: flex;
+  position: relative;
+  border: 4px solid #9b59b6;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.round2:hover {
+  border: 4px solid #fff;
+}
+
+.round2 span {
+  z-index: 999;
+  height: 4px;
+  margin: 1px;
+  width: 30px;
+  background: #9b59b6;
+  transition: 0.4s ease;
+}
+
+.round2 span:first-child {
+  display: flex;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 25%;
+  bottom: 35%;
+}
+
+.round2 span:nth-child(2) {
+  display: flex;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 45%;
+  bottom: 35%;
+}
+
+.round2 span:nth-child(3) {
+  display: flex;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 25%;
+  bottom: 54%;
+}
+
+.round2 span:nth-child(4) {
+  display: flex;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 45%;
+  bottom: 54%;
+}
+
+.round2:hover span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+.round2:hover span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.round2:hover span:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+.round2:hover span:nth-child(4) {
+  transform: rotate(45deg);
+}
+
+.video-responsive {
+  border: 4px solid #fff;
+  max-width: 250vh;
+  min-width: auto;
+  max-height: 45vh;
+  min-height: auto;
 }
 
 footer {
@@ -19,5 +247,5 @@ footer {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 4px;
 }
