@@ -5,81 +5,139 @@
 }
 
 body {
-  background-image: url('../Image/background/background-image_02.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 1080vh;
-  min-width: auto;
-  max-height: 70vh;
-  min-height: auto;
-}
-
-#img-logo {
-  max-width: 300px;
-  min-width: auto;
-  margin-left: 2vh;
-  margin-top: 2vh;
-}
-
-.container_corpo {
-  border: 4px solid rgb(228, 18, 18);
-  margin-left: 5vh;
-  margin-right: 5vh;
-  margin-top: 30vh;
-  margin-bottom: 20vh;
-  max-width: 200vh;
-  max-height: 70vh;
-  flex-direction: row;
   display: flex;
-  align-items: center;
-}
-
-.container_selection_champs {
-  border: 4px solid #fff;
-  color: #fff;
-  /* margin-left: 50vh;
-  margin-top: 60vh; */
-  max-width: 225vh;
-  min-width: auto;
-  max-height: 65vh;
-  min-height: auto;
-  display: flexbox;
-  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../Image/background/background-image_02.jpg');
+  background-repeat: no-repeat;
   align-items: stretch;
 }
 
-.container_champs_nomes {
-  position: relative;
-  max-width: 225vh;
-  max-height: 65vh;
+
+header{
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;   
+}
+
+header h1 {  
   text-align: center;
+  font-size: 8vh;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(80deg, #fff, #9b59b6, #44045e, #9b59b6, #fff);  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;  
+  
 }
 
-#imagem {
-  height: 100vh;
-  max-width: 225vh;
-  max-height: 65vh;
+#nome {  
+  text-align: center;
+  font-size: 5vh;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(80deg, #fff, #9b59b6, #44045e, #9b59b6, #fff);  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;  
+  
 }
 
-.container_selection_setas {
-  position: absolute;
-  z-index: 10 !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  flex-direction: row;
+#rota {  
+  text-align: center;
+  font-size: 5vh;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(80deg, #fff, #9b59b6, #44045e, #9b59b6, #fff);  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;  
+  
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+    text-shadow: 5px 5px #9b59b6;
+  }
+
+  100% {
+    background-position-x: 500%;
+    
+  }
+}
+
+
+
+main {
+  display: flex;
+  margin-top: 2vh;
+  justify-content: center;
+  gap: 20vw;
+  
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: flex;
+  margin-top: 2vh;  
 }
 
-.selection_setas {
+#img-logo {
+  max-width: 15vw;
+  min-width: auto;
+  max-height: 15vh;
+  min-height: auto;
+  margin-left: 2vw;
+  margin-top: 2vh;
+}
+
+.container_selection {    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;    
+  max-height: 60vh;
+}
+
+.container_champ_nomes {  
+  position: relative;
+  max-width: 225vw;
+  max-height: 65vh;
+  text-align: center;
+  font-size: 3vh;
+  font-size: 1.8vw;
+  
+}
+
+.container_setas {  
+  position: absolute;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   display: flex;
   gap: 400px;
+  
+}
+
+#imagem { 
+  width: 21vw;
+  height: 65vh;
+  /* max-width: 21vw;
+  max-height: 65vh; */
 }
 
 .center-con1 {
@@ -95,6 +153,7 @@ body {
   height: 100px;
   border-radius: 100%;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .round1:hover {
@@ -171,6 +230,7 @@ body {
   height: 100px;
   border-radius: 100%;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .round2:hover {
@@ -234,18 +294,54 @@ body {
   transform: rotate(45deg);
 }
 
-.video-responsive {
-  border: 4px solid #fff;
-  max-width: 250vh;
+.teclado_video{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.teclado_top{
+  display: flex;  
+  justify-content: center;
+  height: 10vh;  
+}
+.teclado_top img{  
+  width: 5vw;
+  cursor: pointer;
+  
+}
+
+.teclado_bot{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  height: 10vh;  
+}
+
+.teclado_bot img{  
+  width: 5vw;
+  cursor: pointer;  
+}
+
+
+.video-responsive { 
+  max-width: 50vw;
   min-width: auto;
   max-height: 45vh;
   min-height: auto;
+  
 }
 
-footer {
-  width: 99%;
-  display: flex;
-  justify-content: center;
+.container_footer {
   position: absolute;
-  bottom: 4px;
+  bottom: 20px;
+}
+
+#rodape{
+  color: #fff;  
+  font-family: 'Raleway', sans-serif;  
+  bottom: 1px;
+  position: absolute;
 }
