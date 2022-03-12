@@ -35,31 +35,58 @@ const champs = [
 ];
 
 elementoBTN_left.addEventListener('click', () => {
-  let lens = int(elementoBTN_left.value) - 1;
-  elementoNOME.innerText = champs[lens].nome;
-  elementoROTA.innerText = champs[lens].rota;
-  elementoIMAGEM.src = champs[lens].imagem;
-  elementoVIDEO.src = champs[lens].video;
-  elementoBTN_left.value = String(lens);
-
-  if (lens === -1) {
-    elementoBTN_left.value = champs.length -1;
+  let posicao = elementoBTN_left.value - 1;
+  if (posicao > -1) {
+    elementoNOME.innerText = champs[posicao].nome;
+    elementoROTA.innerText = champs[posicao].rota;
+    elementoIMAGEM.src = champs[posicao].imagem;
+    elementoVIDEO.src = champs[posicao].video;
+    elementoBTN_left.value = posicao;
+  } else {
+    posicao = champs.length - 1;
+    elementoNOME.innerText = champs[posicao].nome;
+    elementoROTA.innerText = champs[posicao].rota;
+    elementoIMAGEM.src = champs[posicao].imagem;
+    elementoVIDEO.src = champs[posicao].video;
+    elementoBTN_left.value = posicao;
   }
 });
 
-// elementoBTN_left.addEventListener('click', () => {
+elementoBTN_right.addEventListener('click', () => {
+  // int(elementoBTN_left.value) += 1;
+  alert(elementoBTN_left.value);
+  alert(typeof(elementoBTN_left.value))
+  let posicao = elementoBTN_left.value;
+  alert(posicao);
+  if (posicao > -1) {
+    elementoNOME.innerText = champs[posicao].nome;
+    elementoROTA.innerText = champs[posicao].rota;
+    elementoIMAGEM.src = champs[posicao].imagem;
+    elementoVIDEO.src = champs[posicao].video;
+    elementoBTN_left.value = posicao;
+  } else {
+    posicao = champs.length - 1;
+    elementoNOME.innerText = champs[posicao].nome;
+    elementoROTA.innerText = champs[posicao].rota;
+    elementoIMAGEM.src = champs[posicao].imagem;
+    elementoVIDEO.src = champs[posicao].video;
+    elementoBTN_left.value = posicao;
+  }
+});
+
+// elementoBTN_right.addEventListener('click', () => {
 //   if (elementoBTN_left.value === '0') {
-//     elementoNOME.innerText = champs[2].nome;
-//     elementoROTA.innerText = champs[2].rota;
-//     elementoIMAGEM.src = champs[2].imagem;
-//     elementoVIDEO.src = champs[2].video;
-//     elementoBTN_left.value = '2';
-//   } else if (elementoBTN_left.value === '2') {
 //     elementoNOME.innerText = champs[1].nome;
 //     elementoROTA.innerText = champs[1].rota;
 //     elementoIMAGEM.src = champs[1].imagem;
 //     elementoVIDEO.src = champs[1].video;
 //     elementoBTN_left.value = '1';
+//   } else if (elementoBTN_left.value === '1') {
+//     elementoNOME.innerText = champs[2].nome;
+//     elementoROTA.innerText = champs[2].rota;
+//     elementoIMAGEM.src = champs[2].imagem;
+//     elementoVIDEO.src = champs[2].video;
+//     elementoBTN_left.value = '2';
 //   } else {
 //     elementoNOME.innerText = champs[0].nome;
 //     elementoROTA.innerText = champs[0].rota;
@@ -68,28 +95,6 @@ elementoBTN_left.addEventListener('click', () => {
 //     elementoBTN_left.value = '0';
 //   }
 // });
-
-elementoBTN_right.addEventListener('click', () => {
-  if (elementoBTN_left.value === '0') {
-    elementoNOME.innerText = champs[1].nome;
-    elementoROTA.innerText = champs[1].rota;
-    elementoIMAGEM.src = champs[1].imagem;
-    elementoVIDEO.src = champs[1].video;
-    elementoBTN_left.value = '1';
-  } else if (elementoBTN_left.value === '1') {
-    elementoNOME.innerText = champs[2].nome;
-    elementoROTA.innerText = champs[2].rota;
-    elementoIMAGEM.src = champs[2].imagem;
-    elementoVIDEO.src = champs[2].video;
-    elementoBTN_left.value = '2';
-  } else {
-    elementoNOME.innerText = champs[0].nome;
-    elementoROTA.innerText = champs[0].rota;
-    elementoIMAGEM.src = champs[0].imagem;
-    elementoVIDEO.src = champs[0].video;
-    elementoBTN_left.value = '0';
-  }
-});
 
 elementoKEY_Q.addEventListener('click', () => {
   for (ch of champs) {
