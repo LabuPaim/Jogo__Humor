@@ -55,7 +55,7 @@ elementoBTN_left.addEventListener('click', () => {
 elementoBTN_right.addEventListener('click', () => {
   let posicao = parseInt(elementoBTN_left.value) + 1;
 
-  if (posicao >= champs.length) {    
+  if (posicao >= champs.length) {
     posicao = 0;
     elementoNOME.innerText = champs[posicao].nome;
     elementoROTA.innerText = champs[posicao].rota;
