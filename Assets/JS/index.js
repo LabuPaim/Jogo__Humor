@@ -53,19 +53,16 @@ elementoBTN_left.addEventListener('click', () => {
 });
 
 elementoBTN_right.addEventListener('click', () => {
-  // int(elementoBTN_left.value) += 1;
-  alert(elementoBTN_left.value);
-  alert(typeof(elementoBTN_left.value))
-  let posicao = elementoBTN_left.value;
-  alert(posicao);
-  if (posicao > -1) {
+  let posicao = parseInt(elementoBTN_left.value) + 1;
+
+  if (posicao >= champs.length) {    
+    posicao = 0;
     elementoNOME.innerText = champs[posicao].nome;
     elementoROTA.innerText = champs[posicao].rota;
     elementoIMAGEM.src = champs[posicao].imagem;
     elementoVIDEO.src = champs[posicao].video;
     elementoBTN_left.value = posicao;
   } else {
-    posicao = champs.length - 1;
     elementoNOME.innerText = champs[posicao].nome;
     elementoROTA.innerText = champs[posicao].rota;
     elementoIMAGEM.src = champs[posicao].imagem;
