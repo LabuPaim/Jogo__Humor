@@ -121,6 +121,21 @@ footer {
 #imagem {
   width: 21vw;
   height: 65vh;
+  -webkit-filter: drop-shadow(50px 50px 50px #fff);
+  filter: drop-shadow(0px 10px 5px rgb(0, 0, 0));
+  animation: anim-stars 20s infinite;
+}
+
+@keyframes anim-stars {
+  0% {
+    transform: translate3d(0px, 0%, 0em);
+  }
+  50% {
+    transform: translate3d(-3px, -2%, -3px);
+  }
+  100% {
+    transform: translate3d(0px, 0%, 0em);
+  }
 }
 
 .center-con1 {
@@ -372,23 +387,79 @@ footer {
   position: absolute;
 }
 
-/* header h1 {
-  color: transparent;
-  text-align: center;
-  font-size: 8vh;
-  font-family: Hack, sans-serif;
-  
-  background: linear-gradient(800deg, rgba(228 , 3, 3),rgba(255, 140, 0), rgba(255, 237, 0), rgba(0, 128, 38), rgba(0, 77, 255), rgba(117, 7, 255));
-  -webkit-background-clip: text;
-  background-size: 80%;
-  animation: shine 5s linear infinite;
-} */
+.share {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #ff9100;
+  position: absolute;
 
-/* @keyframes shine {
-  0% {
-    background-position-x: -500%;
-  }
-  100% {
-    background-position-x: 500%;
-  }
-} */
+  top: 300px;
+  left: 50%;
+  bottom: 5px;
+
+  z-index: 999;
+  text-align: center;
+  overflow: hidden;
+  line-height: 65px;
+  font-size: 1.5em;
+  color: #fff;
+  -moz-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.share:hover {
+  cursor: pointer;
+}
+
+.one,
+.two,
+.three {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 49px;
+  font-size: 1.5em;
+
+  top: 300px;
+  left: 50%;
+  bottom: 5px;
+
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.one:hover,
+.two:hover,
+.three:hover {
+  cursor: pointer;
+}
+
+.one i,
+.two i,
+.three i {
+  display: none;
+}
+
+.one {
+  background: #2196f3;
+}
+
+.two {
+  background: #00e5ff;
+}
+
+.three {
+  background: #6a1b9a;
+}

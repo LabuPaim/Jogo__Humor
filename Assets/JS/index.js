@@ -10,6 +10,11 @@ const elementoKEY_W = document.getElementById('key_w');
 const elementoKEY_E = document.getElementById('key_e');
 const elementoKEY_R = document.getElementById('key_r');
 
+let elementoShare_id = document.getElementById('share_id');
+let elementoOne_id = document.getElementById('one_id');
+let elementoTwo_id = document.getElementById('two_id');
+let elementoThree_id = document.getElementById('three_id');
+
 const champs = [
   {
     champ: '0',
@@ -71,28 +76,6 @@ elementoBTN_right.addEventListener('click', () => {
   }
 });
 
-// elementoBTN_right.addEventListener('click', () => {
-//   if (elementoBTN_left.value === '0') {
-//     elementoNOME.innerText = champs[1].nome;
-//     elementoROTA.innerText = champs[1].rota;
-//     elementoIMAGEM.src = champs[1].imagem;
-//     elementoVIDEO.src = champs[1].video;
-//     elementoBTN_left.value = '1';
-//   } else if (elementoBTN_left.value === '1') {
-//     elementoNOME.innerText = champs[2].nome;
-//     elementoROTA.innerText = champs[2].rota;
-//     elementoIMAGEM.src = champs[2].imagem;
-//     elementoVIDEO.src = champs[2].video;
-//     elementoBTN_left.value = '2';
-//   } else {
-//     elementoNOME.innerText = champs[0].nome;
-//     elementoROTA.innerText = champs[0].rota;
-//     elementoIMAGEM.src = champs[0].imagem;
-//     elementoVIDEO.src = champs[0].video;
-//     elementoBTN_left.value = '0';
-//   }
-// });
-
 elementoKEY_Q.addEventListener('click', () => {
   for (ch of champs) {
     if (elementoNOME.innerText == ch.nome) {
@@ -124,3 +107,90 @@ elementoKEY_R.addEventListener('click', () => {
     }
   }
 });
+
+elementoShare_id.addEventListener('click', () => {
+  if (elementoShare_id.value == '0') {
+    elementoOne_id.animate(
+      {
+        top: '160px',
+        left: '50%',
+      },
+      200,
+    );
+
+    $(this).siblings('.one').animate(
+      {
+        top: '160px',
+        left: '50%',
+      },
+      200,
+    );
+
+    $(this).siblings('.two').delay(200).animate(
+      {
+        top: '260px',
+        left: '40%',
+      },
+      200,
+    );
+
+    $(this).siblings('.three').delay(300).animate(
+      {
+        top: '260px',
+        left: '60%',
+      },
+      200,
+    );
+
+    $('.one i,.two i, .three i').delay(500).fadeIn(200);
+    elementoShare_id.value = '1';
+  } else {
+    $('.one, .two, .three').animate(
+      {
+        top: '300px',
+        left: '50%',
+      },
+      200,
+    );
+
+    $('.one i,.two i, .three i').delay(500).fadeOut(200);
+    elementoShare_id.value = '0';
+  }
+});
+
+// $(function(){
+//   var flag=0;
+
+//   $('.share').on('click',function(){
+//    if(flag == 0)
+//     {
+//       $(this).siblings('.one').animate({
+//       top:'160px',
+//       left:'50%',
+//     },200);
+
+//      $(this).siblings('.two').delay(200).animate({
+//       top:'260px',
+//       left:'40%'
+//     },200);
+
+//      $(this).siblings('.three').delay(300).animate({
+//       top:'260px',
+//       left:'60%'
+//     },200);
+
+//     $('.one i,.two i, .three i').delay(500).fadeIn(200);
+//       flag = 1;
+//     }
+
+//   else{
+//     $('.one, .two, .three').animate({
+//         top:'300px',
+//         left:'50%'
+//       },200);
+
+//   $('.one i,.two i, .three i').delay(500).fadeOut(200);
+//       flag = 0;
+//     }
+//   });
+// });
