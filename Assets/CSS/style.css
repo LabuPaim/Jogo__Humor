@@ -20,8 +20,8 @@ header {
 
 header h1 {
   color: transparent;
-  text-align: center;
-  font-size: 8vw;
+  text-align: center;  
+  font-size: 8vh;
   font-family: Helvetica;
   background: linear-gradient(800deg, rgba(228, 3, 3), rgba(255, 140, 0), rgba(255, 237, 0), rgba(0, 128, 38), rgba(0, 77, 255), rgba(117, 7, 255));
   -webkit-background-clip: text;
