@@ -20,7 +20,7 @@ const champs = [
     champ: '0',
     nome: 'Zeri',
     rota: 'Atiradora',
-    imagem: 'Assets/Champs/Zeri/Zeri.webp',
+    imagem: 'Assets/Champs/Zeri/Zeri.png',
     video: 'Assets/Champs/Zeri/Q1.webm',
   },
   {

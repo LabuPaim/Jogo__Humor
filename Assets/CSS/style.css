@@ -80,7 +80,7 @@ footer {
 }
 
 #img-logo {
-  max-width: 300px;
+  max-width: 250px;
   margin-left: 15px;
   margin-top: 15px;
   -webkit-filter: drop-shadow(5px 5px 5px #fff);
@@ -437,6 +437,7 @@ footer {
 @media (max-width: 810px) {
   .container_champ_nomes {
     min-width: 35vw;
+    min-height: 45vh;
   }
   
 }
@@ -444,6 +445,7 @@ footer {
 @media (max-width: 530px) {
   .container_champ_nomes {
     min-width: 45vw;
+    min-height: 45vh;
   }
 }
 
