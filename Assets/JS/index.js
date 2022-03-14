@@ -1,3 +1,5 @@
+/*======================================================== INICIO =========================================================== */
+
 const elementoNOME = document.getElementById('nome');
 const elementoROTA = document.getElementById('rota');
 const elementoIMAGEM = document.getElementById('imagem');
@@ -9,11 +11,6 @@ const elementoKEY_Q = document.getElementById('key_q');
 const elementoKEY_W = document.getElementById('key_w');
 const elementoKEY_E = document.getElementById('key_e');
 const elementoKEY_R = document.getElementById('key_r');
-
-let elementoShare_id = document.getElementById('share_id');
-let elementoOne_id = document.getElementById('one_id');
-let elementoTwo_id = document.getElementById('two_id');
-let elementoThree_id = document.getElementById('three_id');
 
 const champs = [
   {
@@ -82,7 +79,7 @@ elementoBTN_left.addEventListener('click', () => {
     elementoIMAGEM.src = champs[posicao].imagem;
     elementoVIDEO.src = champs[posicao].video;
     elementoBTN_left.value = posicao;
-  }  
+  }
 });
 
 elementoBTN_right.addEventListener('click', () => {
@@ -92,6 +89,7 @@ elementoBTN_right.addEventListener('click', () => {
     posicao = 0;
     elementoNOME.innerText = champs[posicao].nome;
     elementoROTA.innerText = champs[posicao].rota;
+    elementoIMAGEM.src = champs[posicao].imagem;
     elementoIMAGEM.src = champs[posicao].imagem;
     elementoVIDEO.src = champs[posicao].video;
     elementoBTN_left.value = posicao;

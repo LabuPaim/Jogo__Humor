@@ -1,3 +1,5 @@
+/* =================================================== INICIO ================================================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +15,8 @@ body {
   align-items: stretch;
 }
 
+/* =================================================== HEADER ================================================================ */
+
 header {
   display: flex;
   justify-content: space-around;
@@ -27,42 +31,17 @@ header h1 {
   -webkit-background-clip: text;
   background-size: 80%;
   animation: shine 5s linear infinite;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+  filter: drop-shadow(2px 3px 0px rgb(0, 0, 0));
 }
 
-#nome {
-  color: transparent;
-  font-size: 5vh;
-  font-family: Hack, sans-serif;
-  background: linear-gradient(800deg, #9b59b6, #3498db, #9b59b6);
-  -webkit-background-clip: text;
-  background-size: 80%;
-  animation: shine 5s linear infinite;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+#img-logo {
+  max-width: 250px;
+  margin-left: 0.1vw;
+  margin-top: 0.1vh;
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
 }
 
-#rota {
-  color: transparent;
-  font-size: 5vh;
-  font-family: Hack, sans-serif;
-  background: linear-gradient(800deg, #9b59b6, #3482db, #9b59b6);
-  -webkit-background-clip: text;
-  background-size: 80%;
-  animation: shine 5s linear infinite;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
-}
-
-@keyframes shine {
-  0% {
-    background-position-x: -500%;
-  }
-  100% {
-    background-position-x: 500%;
-  }
-}
+/* =================================================== MAIN ================================================================ */
 
 main {
   display: flex;
@@ -72,20 +51,7 @@ main {
   gap: 20vw;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#img-logo {
-  max-width: 250px;
-  margin-left: 0.1vw;
-  margin-top: 0.1vh;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(2px 5px 8px rgb(0, 0, 0));
-}
+/* --------------------------------------- CONTAINER SELEÇÃO DE CAMPEÃO ----------------------------------------------------- */
 
 .container_selection {
   display: flex;
@@ -117,11 +83,12 @@ footer {
   gap: 30vw;
 }
 
+/* ________________________________________TRATAMENTO DA IMAGEM E NOME DO CAMPEÃO______________________________________________ */
+
 #imagem {
-  max-height: 65vh;
+  height: 100%;
   max-width: 24vw;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
   animation: anim-stars 20s infinite;
 }
 
@@ -137,6 +104,39 @@ footer {
   }
 }
 
+#nome {
+  color: transparent;
+  font-size: 5vh;
+  font-family: Hack, sans-serif;
+  background: linear-gradient(800deg, #9b59b6, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  filter: drop-shadow(2px 3px 0px rgb(0, 0, 0));
+}
+
+#rota {
+  color: transparent;
+  font-size: 5vh;
+  font-family: Hack, sans-serif;
+  background: linear-gradient(800deg, #9b59b6, #3482db, #9b59b6);
+  -webkit-background-clip: text;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  filter: drop-shadow(2px 3px 0px rgb(0, 0, 0));
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+/* __________________________________________________CRIAÇÃO DA SETA LEFT_____________________________________________________ */
+
 .center-con1 {
   display: flex;
   position: relative;
@@ -144,6 +144,7 @@ footer {
   min-width: auto;
   max-height: 11vh;
   min-height: auto;
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
 }
 
 .round1 {
@@ -155,6 +156,7 @@ footer {
   border-radius: 100%;
   cursor: pointer;
   background-color: transparent;
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
 }
 
 .round1:hover {
@@ -219,6 +221,8 @@ footer {
   transform: rotate(-45deg);
 }
 
+/* __________________________________________________CRIAÇÃO DA SETA RIGHT_____________________________________________________ */
+
 .center-con2 {
   display: flex;
   position: relative;
@@ -226,6 +230,7 @@ footer {
   min-width: auto;
   max-height: 11vh;
   min-height: auto;
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
 }
 
 .round2 {
@@ -237,6 +242,7 @@ footer {
   border-radius: 100%;
   cursor: pointer;
   background-color: transparent;
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
 }
 
 .round2:hover {
@@ -301,6 +307,8 @@ footer {
   transform: rotate(45deg);
 }
 
+/* ------------------------------------------- CONTAINER SELEÇÃO DO VIDEO ----------------------------------------------------- */
+
 .teclado_video {
   display: flex;
   flex-direction: column;
@@ -308,12 +316,14 @@ footer {
   gap: 10px;
 }
 
+/* __________________________________________________CRIAÇÃO DO TECLADO_____________________________________________________ */
+
 .teclado_top {
   display: flex;
   justify-content: center;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
 }
+
 .teclado_top img {
   max-width: 100%;
   max-height: 10vh;
@@ -322,7 +332,6 @@ footer {
   cursor: pointer;
   border-radius: 10%;
   height: 10vh;
-
   background: linear-gradient(800deg, rgba(228, 3, 3), rgba(255, 140, 0), rgba(255, 237, 0), rgba(0, 128, 38), rgba(117, 7, 255));
   -webkit-background-clip: solid;
   background-size: 80%;
@@ -338,8 +347,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
 }
 
 .teclado_bot img {
@@ -350,7 +358,6 @@ footer {
   cursor: pointer;
   border-radius: 10%;
   height: 10vh;
-
   background: linear-gradient(800deg, rgba(228, 3, 3), rgba(255, 140, 0), rgba(255, 237, 0), rgba(0, 128, 38), rgba(117, 7, 255));
   -webkit-background-clip: solid;
   background-size: 80%;
@@ -370,28 +377,41 @@ footer {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
-.video-responsive {
+/* __________________________________________________CRIAÇÃO DO VIDEO_____________________________________________________ */
+
+.video {
   max-width: 100%;
   min-width: auto;
   max-height: 55vh;
   min-height: auto;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
+}
+
+/* =================================================== FOOTER ================================================================ */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container_footer {
   position: flex;
   bottom: 20px;
-  -webkit-filter: drop-shadow(5px 5px 5px #fff);
-  filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
+  filter: drop-shadow(2px 3px 1px rgb(0, 0, 0));
 }
 
-#rodape {
+#rodape a {
+  text-decoration: none;
   color: #fff;
   font-family: 'Raleway', sans-serif;
   bottom: 1px;
   position: flex;
+  font-size: 1.5vh;
 }
+
+/* =================================================== RESPONSIVIDADE ================================================================ */
 
 @media (max-width: 999px) {
   body {
@@ -477,5 +497,9 @@ footer {
   .container_champ_nomes {
     min-height: 35vh;
     margin-left: 0vw;
+  }
+
+  #rodape {
+    font-size: 1.2vh;
   }
 }
