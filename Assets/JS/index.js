@@ -82,12 +82,7 @@ elementoBTN_left.addEventListener('click', () => {
     elementoIMAGEM.src = champs[posicao].imagem;
     elementoVIDEO.src = champs[posicao].video;
     elementoBTN_left.value = posicao;
-  }
-  if (elementoNOME.innerText == 'Vex') {
-    document.getElementById("nome").style.marginLeft = "150px";
-  } else {
-    elementoIMAGEM.style.marginLeft = "0px";
-  }
+  }  
 });
 
 elementoBTN_right.addEventListener('click', () => {
