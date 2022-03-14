@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
 }
 
@@ -68,7 +68,7 @@ header h1 {
 
 main {
   display: flex;
-  
+
   margin-left: 2vw;
   margin-right: 2vw;
   justify-content: space-between;
@@ -80,7 +80,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 #img-logo {
@@ -116,13 +115,12 @@ footer {
   align-items: center;
   display: flex;
   gap: 30vw;
-  
 }
 
-#imagem {
+#imagem {  
   max-height: 65vh;
   max-width: 24vw;
-
+  margin-left: 50px;
   -webkit-filter: drop-shadow(5px 5px 5px #fff);
   filter: drop-shadow(1px 3px 8px rgb(0, 0, 0));
   animation: anim-stars 20s infinite;

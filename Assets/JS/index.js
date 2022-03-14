@@ -37,6 +37,34 @@ const champs = [
     imagem: 'Assets/Champs/Vex/vex.png',
     video: 'Assets/Champs/Vex/Q1.webm',
   },
+  {
+    champ: '3',
+    nome: 'Bardo',
+    rota: 'Suporte',
+    imagem: 'Assets/Champs/Bardo/Bardo.png',
+    video: 'Assets/Champs/Bardo/Q1.webm',
+  },
+  {
+    champ: '4',
+    nome: 'Ekko',
+    rota: 'Assassino',
+    imagem: 'Assets/Champs/Ekko/Ekko.png',
+    video: 'Assets/Champs/Ekko/Q1.webm',
+  },
+  {
+    champ: '5',
+    nome: 'Nautilus',
+    rota: 'Tanque',
+    imagem: 'Assets/Champs/Nautilus/Nautilus.png',
+    video: 'Assets/Champs/Nautilus/Q1.webm',
+  },
+  {
+    champ: '6',
+    nome: 'Gwen',
+    rota: 'Maga',
+    imagem: 'Assets/Champs/Gwen/Gwen.png',
+    video: 'Assets/Champs/Gwen/Q1.webm',
+  },
 ];
 
 elementoBTN_left.addEventListener('click', () => {
@@ -54,6 +82,11 @@ elementoBTN_left.addEventListener('click', () => {
     elementoIMAGEM.src = champs[posicao].imagem;
     elementoVIDEO.src = champs[posicao].video;
     elementoBTN_left.value = posicao;
+  }
+  if (elementoNOME.innerText == 'Vex') {
+    document.getElementById("nome").style.marginLeft = "150px";
+  } else {
+    elementoIMAGEM.style.marginLeft = "0px";
   }
 });
 
@@ -149,7 +182,6 @@ elementoKEY_R.addEventListener('click', () => {
     }
   }
 });
-
 
 document.addEventListener('keydown', event => {
   const tecla = event.keyCode;
