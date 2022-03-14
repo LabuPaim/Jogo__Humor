@@ -15,12 +15,12 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 header h1 {
   color: transparent;
-  text-align: center;  
+  text-align: center;
   font-size: 8vh;
   font-family: Helvetica;
   background: linear-gradient(800deg, rgba(228, 3, 3), rgba(255, 140, 0), rgba(255, 237, 0), rgba(0, 128, 38), rgba(0, 77, 255), rgba(117, 7, 255));
@@ -68,7 +68,7 @@ main {
   display: flex;
   margin-left: 2vw;
   margin-right: 2vw;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20vw;
 }
 
@@ -402,7 +402,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  
+
   main {
     flex-direction: column;
     justify-content: center;
@@ -418,16 +418,12 @@ footer {
     margin-left: 2vw;
   }
 
-  .container_champ_nomes {
-    margin-left: 2vw;
-  }
-
   #img-logo {
     max-width: 30vw;
   }
 
   .container_setas {
-    margin-left: -12vw;
+    margin-left: -17vw;
   }
 
   .container_footer {
@@ -439,20 +435,47 @@ footer {
   .container_champ_nomes {
     min-width: 35vw;
     min-height: 45vh;
+    margin-left: 0vw;
   }
-  
+
+  .container_setas {
+    gap: 20vw;
+    margin-left: -16vw;
+    gap: 30vw;
+  }
 }
 
 @media (max-width: 530px) {
   .container_champ_nomes {
     min-width: 45vw;
     min-height: 45vh;
+    margin-left: 0vw;
+  }
+
+  .container_setas {
+    position: relative;
+    gap: 20vw;
+    margin-left: 0vw;
+    gap: 30vw;
   }
 }
 
 @media (max-width: 427px) {
-  .container_champ_nomes {
-    min-width: 65vw;
+  .container_selection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0vw;
   }
-  
+
+  .container_setas {
+    position: relative;
+    gap: 20vw;
+    margin-left: 0vw;
+  }
+
+  .container_champ_nomes {
+    min-height: 35vh;
+    margin-left: 0vw;
+  }
 }
