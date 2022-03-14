@@ -63,6 +63,7 @@ main {
 .container_champ_nomes {
   height: 95%;
   min-width: 25vw;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -73,9 +74,9 @@ main {
 
 .container_setas {
   max-width: 100%;
-  
+
   max-height: 20vh;
-  
+
   position: absolute;
   flex-direction: row;
   justify-content: center;
@@ -412,7 +413,7 @@ footer {
   font-size: 1.5vh;
 }
 
-/* =================================================== RESPONSIVIDADE ================================================================ */
+/* =================================================== RESPONSIVIDADE 999 ========================================================== */
 
 @media (max-width: 999px) {
   body {
@@ -439,6 +440,15 @@ footer {
     margin-left: 2vw;
   }
 
+  #imagem {    
+    max-width: 30vw;
+    
+  }
+
+  .container_champ_nomes {
+    margin-left: -5vw;
+  }
+
   #img-logo {
     max-width: 30vw;
   }
@@ -452,10 +462,13 @@ footer {
   }
 }
 
+/* =================================================== RESPONSIVIDADE 810 ========================================================== */
+
 @media (max-width: 810px) {
+  header h1 {
+    font-size: 6vh;
+  }
   .container_champ_nomes {
-    min-width: 35vw;
-    min-height: 45vh;
     margin-left: 0vw;
   }
 
@@ -466,11 +479,20 @@ footer {
   }
 }
 
+/* =================================================== RESPONSIVIDADE 530 ========================================================== */
+
 @media (max-width: 530px) {
+
+  header h1 {    
+    font-size: 5vh;
+  }
   .container_champ_nomes {
-    min-width: 45vw;
-    min-height: 45vh;
     margin-left: 0vw;
+  }
+
+  #imagem {    
+    max-width: 45vw;
+    
   }
 
   .container_setas {
@@ -481,14 +503,11 @@ footer {
   }
 }
 
+/* =================================================== RESPONSIVIDADE 427 ========================================================== */
+
 @media (max-width: 427px) {
-
-  header {    
-    margin-top: 1vh;
-  }
-
-  header h1 {    
-    font-size: 6vh;
+  header h1 {
+    font-size: 4vh;
   }
 
   .container_selection {
@@ -505,8 +524,6 @@ footer {
   }
 
   .container_champ_nomes {
-    min-width: 25vw;
-    min-height: 25vh;
     margin-left: 0vw;
   }
 
