@@ -483,6 +483,10 @@ footer {
 
 @media (max-width: 427px) {
 
+  header {    
+    margin-top: 1vh;
+  }
+
   header h1 {    
     font-size: 6vh;
   }
